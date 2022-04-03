@@ -13,7 +13,7 @@ class App extends Component {
     };
     return (
       <Fragment>
-        <div style={style}>
+        <div style={style}>yarn global add serve
           {
             (function() {
               if (value === 1) return (<div className='App'>하나하나</div>);
