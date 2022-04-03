@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
+import Sub from './Sub';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    const value = 1;
+    const style = {
+      backgroundColor: 'black',
+      padding: '16px',
+      color: 'white',
+      fontSize: '12px'
+    };
+    return (
+      <Fragment>
+        <div style={style}>
+          {
+            (function() {
+              if (value === 1) return (<div className='App'>하나하나</div>);
+              if (value === 2) return (<div>둘</div>);
+              if (value === 3) return (<div>셋</div>);
+            })()
+          }
+        </div>
+        <Sub/>
+      </Fragment>
+    );
+  }
 }
 
 export default App;
