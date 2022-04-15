@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import ScrollEvent from './ScrollEvent';
 import Sub from './Sub';
 import './App.css';
 
@@ -23,6 +24,7 @@ class App extends Component {
           }
         </div>
         <Sub/>
+        <ScrollEvent/>
       </Fragment>
     );
   }

@@ -1,13 +1,36 @@
-import React, { Component } from 'react';
+// import React from 'react';
 
-class Sub extends Component {
-  render() {
-    return (
-      <div>
-        안녕하세요! 제 이름은 <b>{this.props.name}</b> 입니다.
-      </div>
-    );
+// function Counter() {
+//   return (
+//     <div>
+//       <h1>0</h1>
+//       <button>+1</button>
+//       <button>-1</button>
+//     </div>
+//   );
+// }
+
+
+import React, { useState } from 'react';
+
+function Counter() {
+  const [number, setNumber] = useState(0);
+
+  const onIncrease = () => {
+    setNumber(number + 1);
   }
+
+  const onDecrease = () => {
+    setNumber(number - 1);
+  }
+
+  return (
+    <div>
+      <h1>{number}</h1>
+      <button onClick={onIncrease}>+1</button>
+      <button onClick={onDecrease}>-1</button>
+    </div>
+  );
 }
 
-export default Sub;
+export default Counter;
