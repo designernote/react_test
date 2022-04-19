@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import AccordionList from './AccordionList';
 import ScrollEvent from './ScrollEvent';
 import Sub from './Sub';
 import './App.css';
@@ -12,6 +13,8 @@ class App extends Component {
       color: 'white',
       fontSize: '12px'
     };
+
+    
     return (
       <Fragment>
         <div style={style}>yarn global add serve
@@ -25,6 +28,7 @@ class App extends Component {
         </div>
         <Sub/>
         <ScrollEvent/>
+        <AccordionList/>
       </Fragment>
     );
   }

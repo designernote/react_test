@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import "./style.css";
 
 
 function App() {
@@ -31,7 +32,6 @@ function App() {
     backgroundColor: "blue",
     fontFamily: "Arial"
   }
-
   const StyledHeader = styled.header`
     color: white;
     background-color: black;
@@ -39,8 +39,17 @@ function App() {
     width: 300px;
     text-align: center;
   `;
+  const StyledButton = styled.button`
+    color: #333333;
+    background: #efefef;
+    font-size:2rem;
+    border:5px solid red;
+  `;
   const Header = () => {
     return <StyledHeader>This is Header.</StyledHeader>;
+  };
+  const TextCon = () => {
+    return <StyledButton>This is text이다 울랄ㄹ라.</StyledButton>;
   };
 
   
@@ -49,6 +58,7 @@ function App() {
     <div style={hstyle} className="App">
       
       <Header />
+      <TextCon />
 
       <div className={ScrollActive ? "fixedBox fixed" : "fixedBox"}>
         {ScrollActive ? "I am fixed! 😎" : "I will be fixed! 😘"}
